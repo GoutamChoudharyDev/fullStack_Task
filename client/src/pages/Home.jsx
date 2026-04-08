@@ -22,7 +22,7 @@ const Home = () => {
         try {
             await api.get('/api/auth/logout');
             // Redirect to login page or perform other logout actions
-            navigate('/login');
+            navigate('/');
         } catch (error) {
             console.error("Error logging out:", error);
         }
@@ -37,6 +37,13 @@ const Home = () => {
         <div className='w-full h-screen mx-auto pt-10 p-6 bg-gray-600 shadow-md'>
             <h1 className='text-2xl text-gray-500'>Home Page</h1>
             <h2 className='text-xl text-gray-300'>Welcome : {name}</h2>
+
+            {/* product page */}
+            <button
+                onClick={() => navigate('/products')}
+                className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4">
+                View Products
+            </button>
 
             {/* logout button  */}
             <button

@@ -39,7 +39,7 @@ const SignUpPage = () => {
                 onSubmit={handleSubmit}
                 className="flex flex-col"
             >
-                <label htmlFor="username">Username:</label>
+                <label className="mb-2 text-gray-700" htmlFor="username">Username:</label>
                 <input
                     type="text"
                     className="mb-4 p-2 border bg-gray-100 text-gray-700 border-gray-300 rounded"
@@ -49,7 +49,7 @@ const SignUpPage = () => {
                     onChange={(e) => setUsername(e.target.value)}
                     required />
 
-                <label htmlFor="email">Email:</label>
+                <label className="mb-2 text-gray-700" htmlFor="email">Email:</label>
                 <input
                     type="email"
                     className="mb-4 p-2 border bg-gray-100 text-gray-700 border-gray-300 rounded"
@@ -58,7 +58,7 @@ const SignUpPage = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required />
-                <label htmlFor="password">Password:</label>
+                <label className="mb-2 text-gray-700" htmlFor="password">Password:</label>
                 <input
                     type="password"
                     className="mb-4 p-2 border bg-gray-100 text-gray-700 border-gray-300 rounded"

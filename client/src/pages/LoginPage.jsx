@@ -23,7 +23,7 @@ const LoginPage = () => {
             setPassword("");
 
             // Navigate to login page after successful signup
-            navigate('/');
+            navigate('/home');
         } catch (error) {
             console.error("Error logging in:", error);
         }
@@ -35,7 +35,7 @@ const LoginPage = () => {
                 onSubmit={handleSubmit}
                 className="flex flex-col"
             >
-                <label htmlFor="email">Email:</label>
+                <label className="mb-2 text-gray-700" htmlFor="email">Email:</label>
                 <input
                     type="email"
                     className="mb-4 p-2 border bg-gray-100 text-gray-700 border-gray-300 rounded"
@@ -44,7 +44,7 @@ const LoginPage = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required />
-                <label htmlFor="password">Password:</label>
+                <label className="mb-2 text-gray-700" htmlFor="password">Password:</label>
                 <input
                     type="password"
                     className="mb-4 p-2 border bg-gray-100 text-gray-700 border-gray-300 rounded"
