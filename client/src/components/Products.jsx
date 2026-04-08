@@ -22,21 +22,23 @@ const Products = () => {
     return (
         <div>
             {/* Products table */}
-            <h1 className='text-2xl text-gray-500'>Products Page</h1>
-            <table className='w-full text-left border-collapse mt-4 '>
-                <thead className='bg-gray-700 w-full text-white'>
-                    <tr className='w-full'>
-                        <th className='border-b-2 border-gray-300 p-2'>Product Name</th>
-                        <th className='border-b-2 border-gray-300 p-2'>SKU</th>
-                        <th className='border-b-2 border-gray-300 p-2'>Category</th>
-                        <th className='border-b-2 border-gray-300 p-2'>Price</th>
-                        <th className='border-b-2 border-gray-300 p-2'>Stock Quality</th>
-                        <th className='border-b-2 border-gray-300 p-2'>Last Update</th>
-                    </tr>
-                </thead>
-                <tbody className='bg-gray-800 w-full text-white'>
-                    {/* Map through products and display in table rows */}
-                    <tr className='w-full'>
+            <h1 className="text-2xl font-semibold text-gray-300 mb-4">
+                Products Page
+            </h1>
+            <div className="overflow-x-auto rounded-xl border border-gray-700 max-w-5xl mx-auto">
+                <table className="w-full rounded-xl border border-gray-700">
+                    <thead className='bg-gray-700 text-white'>
+                        <tr className='w-full'>
+                            <th className='border-b-2 border-gray-300 p-2'>Product Name</th>
+                            <th className='border-b-2 border-gray-300 p-2'>SKU</th>
+                            <th className='border-b-2 border-gray-300 p-2'>Category</th>
+                            <th className='border-b-2 border-gray-300 p-2'>Price</th>
+                            <th className='border-b-2 border-gray-300 p-2'>Stock Quality</th>
+                            <th className='border-b-2 border-gray-300 p-2'>Last Update</th>
+                        </tr>
+                    </thead>
+                    <tbody className='bg-gray-800 w-full text-white'>
+                        {/* Map through products and display in table rows */}
                         {
                             products.map((product) => (
                                 <tr key={product._id} className='w-full'>
@@ -49,9 +51,9 @@ const Products = () => {
                                 </tr>
                             ))
                         }
-                    </tr>
-                </tbody>
-            </table>
+                    </tbody>
+                </table >
+            </div>
         </div>
     )
 }

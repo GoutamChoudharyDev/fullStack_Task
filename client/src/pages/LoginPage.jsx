@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { api } from "../services/api";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const LoginPage = () => {
     const [email, setEmail] = useState("");
@@ -58,6 +58,8 @@ const LoginPage = () => {
                     className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                     type="submit">Login
                 </button>
+
+                <span className="text-gray-600">don't have an account?</span> <Link to="/signup" className="text-blue-500 hover:underline">Sign up here</Link>
             </form>
         </main>
     )
