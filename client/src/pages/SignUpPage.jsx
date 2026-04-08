@@ -26,7 +26,7 @@ const SignUpPage = () => {
             setPassword("");
 
             // Navigate to login page after successful signup
-            navigate('/login');
+            navigate('/');
         } catch (error) {
             console.error("Error signing up:", error);
         }
